@@ -25,10 +25,7 @@
                 <artifactId>slingstart-maven-plugin</artifactId>
                 <version>1.7.16</version>
                 <extensions>true</extensions>
-                <configuration>
-                    <createWebapp>true</createWebapp>
-                </configuration>
-            </plugin>
+           </plugin>
         </plugins>
     </build>
     <properties>
