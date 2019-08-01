@@ -41,8 +41,10 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>apache/${artifactId}</repository>
+                    <repository>registry.homelab.lmn.ro/apache/${project.artifactId}</repository>
                     <tag>${project.version}</tag>
+                    <!-- inconvenient when copying the jar file to the docker image - matches COPY glob -->
+                    <skipDockerInfo>true</skipDockerInfo>
                 </configuration>
             </plugin>
         </plugins>
