@@ -16,13 +16,7 @@
 #  specific language governing permissions and limitations
 #  under the License.
 #
-[feature name=sling]
-[artifacts]
-  org.apache.sling/org.apache.sling.starter/12-SNAPSHOT/slingstart
+[feature name=:boot]
 
-[configurations]
-  org.apache.sling.commons.log.LogManager
-    org.apache.sling.commons.log.pattern="%d{dd.MM.yyyy HH:mm:ss.SSS}\ *%level*\ [%thread]\ %logger\ %msg%n"
-    org.apache.sling.commons.log.file=""
-    org.apache.sling.commons.log.level="info"
-    org.apache.sling.commons.log.packagingDataEnabled=B"true"
+[settings]
+  sling.system.packages.sun.misc=sun.misc
