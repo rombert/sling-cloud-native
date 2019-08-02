@@ -21,6 +21,7 @@
 [artifacts]
   org.apache.sling/org.apache.sling.starter/12-SNAPSHOT/slingstart
   org.apache.sling/org.apache.sling.commons.metrics.prometheus/1.0-SNAPSHOT
+  org.apache.sling/org.apache.sling.starter.content/1.0.5-SNAPSHOT
   io.prometheus/simpleclient_servlet/0.0.23
   io.prometheus/simpleclient_common/0.0.23
   io.prometheus/simpleclient_dropwizard/0.0.23
