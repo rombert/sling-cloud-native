@@ -26,6 +26,7 @@
   io.prometheus/simpleclient_common/0.0.23
   io.prometheus/simpleclient_dropwizard/0.0.23
   io.prometheus/simpleclient/0.0.23
+  org.apache.sling/org.apache.sling.dynamic-include/3.1.5-SNAPSHOT
 
 [configurations]
   org.apache.sling.commons.log.LogManager
