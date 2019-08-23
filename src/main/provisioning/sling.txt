@@ -35,3 +35,10 @@
     org.apache.sling.commons.log.file=""
     org.apache.sling.commons.log.level="info"
     org.apache.sling.commons.log.packagingDataEnabled=B"true"
+
+  org.apache.sling.dynamicinclude.Configuration-starter
+    include-filter.config.enabled=B"true"
+    include-filter.config.resource-types=["sling/starter/hostname"]
+    include-filter.config.path="/content/starter"
+    include-filter.config.include-type="SSI"
+    include-filter.config.add_comment=B"true"
