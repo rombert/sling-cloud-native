@@ -22,3 +22,12 @@
 # restarts
 [variables]
   oak.version=1.20-cloud-native-poc-SNAPSHOT
+
+[configurations runModes=oak_mongo]
+  org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService
+    mongouri="mongodb://mongo:27017"
+    db="sling-starter"
+    customBlobStore=B"true"
+
+  org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore
+    path="/mnt/datastore"
