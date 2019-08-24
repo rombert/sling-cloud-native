@@ -13,10 +13,13 @@ spec:
     metadata:
       labels:
         app: sling
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
     spec:
       containers:
       - name: sling
-        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-003-mongo_fds
+        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-004-metrics
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
