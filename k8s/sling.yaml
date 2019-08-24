@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sling
-        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-000-basic
+        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-001-logging
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
