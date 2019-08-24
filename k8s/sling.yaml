@@ -16,10 +16,16 @@ spec:
     spec:
       containers:
       - name: sling
-        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-001-logging
+        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-002-readiness
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 5
 
 
 ---
