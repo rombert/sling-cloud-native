@@ -42,7 +42,7 @@
                 </executions>
                 <configuration>
                     <repository>registry.homelab.lmn.ro/apache/${project.artifactId}</repository>
-                    <tag>${project.version}</tag>
+                    <tag>${docker.image.tag}</tag>
                     <!-- inconvenient when copying the jar file to the docker image - matches COPY glob -->
                     <skipDockerInfo>true</skipDockerInfo>
                 </configuration>
@@ -51,5 +51,6 @@
     </build>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <docker.image.tag>${project.version}</docker.image.tag>
     </properties>
 </project>
