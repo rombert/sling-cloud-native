@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: sling
-        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-005-scaling
+        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-006-caching
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -78,6 +78,9 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     # set sticky sessions via cookie
     nginx.ingress.kubernetes.io/affinity: "cookie"
+    # Enable server-side includes
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+        ssi on;
 spec:
   tls:
     - secretName: homelab.lmn.ro
