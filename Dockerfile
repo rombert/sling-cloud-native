@@ -2,7 +2,7 @@ FROM openjdk:8-jre-alpine
 MAINTAINER dev@sling.apache.org
 
 RUN mkdir -p /opt/sling
-COPY target/sling-cloud-ready-*.jar /opt/sling/sling.jar
+COPY target/sling-cloud-native-*.jar /opt/sling/sling.jar
 
 WORKDIR /opt/sling
 EXPOSE 8080
