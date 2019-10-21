@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sling
+  labels:
+    app: sling
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sling
+  template:
+    metadata:
+      labels:
+        app: sling
+    spec:
+      containers:
+      - name: sling
+        image: registry.homelab.lmn.ro/apache/sling-cloud-native:1.0-demo-000-basic
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: sling
+spec:
+  selector:
+    app: sling
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-sling
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - secretName: homelab.lmn.ro
+  rules:
+  - host: sling-starter.homelab.lmn.ro
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sling
+          servicePort: 80

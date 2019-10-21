@@ -20,25 +20,4 @@
 
 [artifacts]
   org.apache.sling/org.apache.sling.starter/12-SNAPSHOT/slingstart
-  org.apache.sling/org.apache.sling.commons.metrics.prometheus/1.0-SNAPSHOT
-  org.apache.sling/org.apache.sling.starter.content/1.0.5-SNAPSHOT
-  org.apache.sling/org.apache.sling.starter.content.extender/1.0-SNAPSHOT
-  io.prometheus/simpleclient_servlet/0.0.23
-  io.prometheus/simpleclient_common/0.0.23
-  io.prometheus/simpleclient_dropwizard/0.0.23
-  io.prometheus/simpleclient/0.0.23
-  org.apache.sling/org.apache.sling.dynamic-include/3.1.5-SNAPSHOT
 
-[configurations]
-  org.apache.sling.commons.log.LogManager
-    org.apache.sling.commons.log.pattern="%d{dd.MM.yyyy HH:mm:ss.SSS}\ *%level*\ [%thread]\ %logger\ %msg%n"
-    org.apache.sling.commons.log.file=""
-    org.apache.sling.commons.log.level="info"
-    org.apache.sling.commons.log.packagingDataEnabled=B"true"
-
-  org.apache.sling.dynamicinclude.Configuration-starter
-    include-filter.config.enabled=B"true"
-    include-filter.config.resource-types=["sling/starter/hostname"]
-    include-filter.config.path="/content/starter"
-    include-filter.config.include-type="SSI"
-    include-filter.config.add_comment=B"true"
